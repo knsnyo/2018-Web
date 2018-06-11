@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title> CARD </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.card
+		{
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			background-color:#EA202C;
+		}
+		*{box-sizing: border-box;}
+		/* mobile */
+		[class*="col-"] /* all col- */
+		{
+			width: 100%;
+			float: left;
+			padding: 15px; /* margin */
+			text-align: center;
+		}
+		/* computer */
+		@media only screen and (min-width:400px) /*   > 400 */
+		{
+
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;}
+		}
+		.row::after
+		{
+			content: "";
+			clear: both;
+			display: table;
+		}
+		#chocolate
+		{
+			display: none;
+		}
+	</style>
+		<script type = "text/Javascript">
+			function give()
+			{
+				document.getElementById("chocolate").style.display = "block";
+				document.getElementById("me").src = "images/happy_me.gif";
+				document.getElementById("talk").innerHTML = " I am really happy! <br/> Thanks for the chocolate! <br/>  Your chocolate is very yummy! <br/> I think you are an angel! <br/> Thank you so much!";
+			}
+			function take()
+			{
+				document.getElementById("chocolate").style.display = "none";
+				document.getElementById("me").src = "images/sad_me.gif";
+				document.getElementById("talk").innerHTML = " I want to take a chocolate! <br/> I can eat chocolate! <br/>  I have a mouth! <br/> But I did't get any chocolate! <br/> Please give me a chocolate! ";
+			}
+		</script>
+</head>
+<body>
+	<div class = "card">
+		<div class = "row">
+			<div class = "co1-12" style = "text-align:center; font-size:30px; font-style:italic; font-family:Georgia;">  Valenteins day card  </div>
+		</div>
+		<div class = "row">
+			<div class = "col-4" style = "background-color:#95BDCC;"> <img src = "images/sad_me.gif" id = "me" width = "80%" alt = "sad"> <br/> It's me </div>
+			<div class = "col-8" style = "background-color:#FB8604; font-family:fantasy;" id = "talk"> I want to take a chocolate! <br/> I can eat chocolate! <br/> I have a mouth! <br/> But I did't get any chocolate! <br/> Please give me a chocolate! </div> 
+		</div>
+		<div class = "row" style = "background-color:#F7D4D6">
+			<div class = "col-12" style = "font-family:Garamond"> Do you want to give some chocolate? <br/> If you want to give some chocolate, <br/> <b> Press the button! <b>  </div>
+		</div>
+		<div class = "row">
+			<div class = "col-6">
+				<button onclick = "give()"> Give me chocolate </button>
+			</div>
+			<div class = "col-6">
+				<button onclick = "take()"> Take chocolate from me </button>
+			</div>
+		</div>
+		<div class = "row">
+			<div class = "col-12">
+				<img src = "images/chocolate1.jpg" id = "chocolate" alt = "chocolate1" width="100%">
+			</div>
+	</div>
+</body>
+</html>
