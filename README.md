@@ -1,2 +1,1 @@
-# knsnyo.github.io
-card
+# 2018 Web
